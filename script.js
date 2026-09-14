@@ -1,7 +1,7 @@
 // Supabase configuration. Use ONLY the public anon/publishable key here.
 // NEVER put the service_role/secret key in frontend code.
 const SUPABASE_URL="https://nllozkqelygctmvypijd.supabase.co";
-const SUPABASE_ANON_KEY="sb_publishable_tZOJxU7fWrXPdbPhK0NB4w_0rOo_e9I";
+const SUPABASE_ANON_KEY="sb_publishable_tZOJxU7fWrXPdbPhK0NB4w_0rOo_e9l";
 const TEAMS=["Arsenal","Barcelona","Bayern Munich","Chelsea","Inter Milan","Liverpool","Manchester City","Manchester United","Paris Saint-Germain","Real Madrid","AC Milan","Juventus","Borussia Dortmund","Atletico Madrid","Tottenham Hotspur","Napoli"];
 const configured=!SUPABASE_URL.includes("PASTE_")&&!SUPABASE_ANON_KEY.includes("PASTE_");
 const db=configured?supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY):null;
