@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AYMAN EFOOTBALL HUB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header class="hero"><nav class="nav wrap"><a class="brand" href="#">⚽ AYMAN <b>EFOOTBALL HUB</b></a><a class="navbtn" href="#register">Register</a></nav>
+<div class="heroGrid wrap"><div><p class="eyebrow">EFOOTBALL TOURNAMENT HUB</p><h1>Choose your team.<br><span>Own the match.</span></h1><p class="lead">Register your player details and reserve an available team. Once a team is taken, it is locked for every other player.</p><a class="btn" href="#register">Register Now →</a></div>
+<div class="heroCard"><div class="ball">⚽</div><p>TEAM SELECTION</p><strong>ONE TEAM<br>PER PLAYER</strong></div></div></header>
+<main>
+<section id="register" class="section wrap"><div class="heading"><p class="eyebrow">PLAYER REGISTRATION</p><h2>Join the Hub</h2><p>Enter your details and select one team.</p></div>
+<div class="grid"><form id="registrationForm" class="panel">
+<label>Full Name<input id="fullName" maxlength="60" placeholder="Enter your full name" required></label>
+<label>eFootball Username<input id="username" maxlength="30" placeholder="Enter your eFootball username" required></label>
+<label>Select Team<select id="team" required><option>Loading teams...</option></select><small>Teams already selected are disabled automatically.</small></label>
+<button id="submitBtn" class="btn" type="submit">Reserve My Team →</button><p class="note">Your registration is stored in the shared Supabase database.</p><div id="message" class="message"></div>
+</form>
+<aside class="panel"><div class="icon">🏆</div><h3>How it works</h3><div class="step"><b>01</b><span><strong>Register</strong>Enter your name and eFootball username.</span></div><div class="step"><b>02</b><span><strong>Pick a team</strong>Select a team that is still available.</span></div><div class="step"><b>03</b><span><strong>Get confirmed</strong>Your team is reserved in the shared database.</span></div><div class="warning"><b>Live system:</b> the database prevents two players from reserving the same team.</div></aside></div></section>
+<section class="section teams"><div class="wrap"><div class="heading center"><p class="eyebrow">LIVE TEAM BOARD</p><h2>Team Availability</h2><p>Availability is loaded from Supabase.</p></div><div id="teamGrid" class="teamGrid"></div></div></section>
+<section id="players" class="section wrap"><div class="heading"><p class="eyebrow">REGISTERED PLAYERS</p><h2>Current Players</h2><p id="playerCount">Loading...</p></div><div id="playersList"><div class="empty">Loading registered players...</div></div></section>
+</main>
+<footer><div class="wrap foot">© <span id="year"></span> AYMAN EFOOTBALL HUB <span>Play fair. Respect your opponent. ⚽</span></div></footer>
+<script src="script.js"></script>
+</body></html>
